@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class flightApp {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int distence;
+        int pessengerTip;
+        int pessengerAge;
+        System.out.println("please enter set out tip: \n 1. go \n 2. go-back");
+        pessengerTip=input.nextInt();
+        System.out.println("please enter age:");
+        pessengerAge=input.nextInt();
+        System.out.println("please enter going distance from Km:");
+        distence=input.nextInt();
+        int normalPrice=(distence*1/10);
+        int totalPrice;
+        if(pessengerAge<=12 || pessengerTip==1);
+        totalPrice=(normalPrice-(normalPrice*(1/2)));
+        if(pessengerAge<=12 || pessengerTip==2);
+        totalPrice=(normalPrice-(normalPrice*(1/2)+(normalPrice*1/5)));
+        if(pessengerAge>=65 || pessengerTip==1);
+        totalPrice=(normalPrice-(normalPrice*(30/100)));
+        if(pessengerAge>=65 || pessengerTip==2);
+        totalPrice=(normalPrice-((normalPrice*30/100)+ (normalPrice*1/5)));
+        System.out.println("this normal price is " + normalPrice + "$ and discounted price is  " + totalPrice + "$");
+        
+        input.close();
+    }   
+}
