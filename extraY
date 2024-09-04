@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class extraYear {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("please enter you want year:");
+        int year = input.nextInt();
+        int extraYear = year % 4;
+        if(extraYear==0){
+        System.out.println("this year is extra year");
+        }else{
+        System.out.println("this year is not extra year");
+        }
+        input.close();
+    }   
+}
