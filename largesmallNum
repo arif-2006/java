@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class largeSmallNum {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("please enter number piece ");
+        int entryPiece = input.nextInt();
+        System.out.println("please enter number one: ");
+        int numbers = input.nextInt();
+        int max=numbers;
+        int min=numbers;
+    
+        for (int i = 2; i <= entryPiece; i++) {
+        System.out.println("please enter " + i + ". number");
+        numbers = input.nextInt();
+    }
+    if(numbers>max);
+        numbers =max;
+    if(numbers<min);
+        numbers = min;
+
+        System.out.println("in your numbers largest number is "+ max);
+        System.out.println("in your numbers smallest number is " + min);
+        input.close();
+    }
+}
+
+
