@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+
+public class bankSystem {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        //Account information
+        String accountName = ("baboli20");
+        String password = ("arif200619");
+        boolean loginSuces = false;
+        
+        System.out.println("please entry username: ");
+
+        String nameCont = input.nextLine();
+
+        System.out.println("please entry password: ");
+
+        String passCont = input.nextLine();
+
+        while(!loginSuces)
+        if(accountName.equals(nameCont) && password.equals(passCont)){
+            System.out.println("username and password is correct");
+            loginSuces=true;
+        }
+        else{
+          System.out.println("username or password not correct please try again");
+          System.out.println("please entry username:");
+          nameCont=input.nextLine();
+          System.out.println("please entry password:");
+          passCont=input.nextLine();
+        }
+        //Buraya kadar olan bölüm banka giriş kontrolüydü bundan sonrası banka içerisindeki tercihlerdir.
+        //Bundan dolayı şu an bir bakiye oluşturacağız
+        int accountVal = 5000;
+
+        
+        System.out.println("Welcome to your bank please choose process:\n 1.Deposit money \n 2.Withdraw money\n 3.Password process\n 4.Exit");
+        int choose = input.nextInt();
+       
+        //Swtich-case yapsının kullanımına örnek olarak..
+        switch(choose){
+            case 1 :
+            System.out.println("this accaount value is " + accountVal + " now... \n what your amount the want deposit?");
+            int depositVal = input.nextInt();
+            int newVal = depositVal+accountVal;
+            System.out.println("your new accaount value is " + newVal);
+            break;
+            case 2 :
+            System.out.println("this accaount value is" + accountVal + "now... \n what your amount the want whitdarw?");
+            int whitdraw = input.nextInt();
+            int newVal2 = whitdraw-accountVal;
+            System.out.println("your new accaount value is " + newVal2);
+            break;
+            case 3 : 
+            System.out.println("please entry old password");
+            String oldPass = input.nextLine();
+                if(oldPass.equals(password)){
+                    System.out.println("please entry new password..");
+                    String newPass=input.nextLine();
+                    newPass=password;
+                    System.out.println(newPass);
+                }
+                else{
+                    System.out.println("old password is not correct");
+                }
+                break;
+            case 4 :
+                System.out.println("see you next time..");
+                break;
+                
+            }
+            input.close();
+        }
+}
+
