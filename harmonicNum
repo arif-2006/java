@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+
+public class harmonicNum {
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.println("please enter finish number: ");
+    int num=input.nextInt();
+    int result =0;
+    
+    for (int i = 0; i < num; i++) {
+        result+=(1/i);
+        
+    }
+    System.out.println(result);
+    }
+        
+    
+}
