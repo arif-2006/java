@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class practice {
+
+    static int f(int fib){
+    int  lastnumber=0 , sum=0 ;
+        
+        while(lastnumber < fib){
+            lastnumber++;
+            sum+=lastnumber;
+            System.out.println(lastnumber);
+        }
+        System.out.println(sum);
+    return sum;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("please enter fibonacci base");
+        int number = input.nextInt();
+        f(number);
+    }
+}
