@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class practice {
+    static boolean isPalindrom(int number) {
+        int temp=number,reversenumber=0,  lastnumber;
+        while (temp != 0){
+            lastnumber=temp%10;
+//buraki işlemde basamak sayısını bir arttırıp üzerine ekleme yapıyoruz
+            reversenumber=(reversenumber*10)+lastnumber;
+            temp/=10;
+        }
+//burada sayının palindrom olup olmadığını kontrol ediyoruz
+    if(reversenumber==number){
+            return true;
+    }else;
+            return false;
+}   
+   
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.println("please enter number");
+    int num = input.nextInt();  
+    System.out.println(isPalindrom(num));
+    input.close();
+    }
+    
+}
