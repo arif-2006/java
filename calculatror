@@ -1,0 +1,176 @@
+import java.util.Scanner;
+
+
+
+public class practice {
+    
+    static void sum(){
+        Scanner input = new Scanner(System.in);
+        double number , result;
+        int i = 1;
+        result=0;
+        while(true){
+            System.out.println(i++ + ". number");
+            number=input.nextDouble();
+            result+=number;
+        if(number == 0){
+            break;
+        }
+    }System.out.println("this result-----> " + result);
+    input.close();
+}
+    static void minus(){
+        Scanner input = new Scanner(System.in);
+        double lastnumber , result1, first , result2;
+        System.out.println("how many enter the number?");
+        int numberpiece = input.nextInt();
+        System.out.println("please enter first number");
+        first=input.nextDouble();
+        result1=0;
+        for (int i = 2; i <= numberpiece; i++) {
+                System.out.println("please enter "+ i + ". number");
+                lastnumber=input.nextDouble();
+                result1-=lastnumber;
+}               result2 = first+result1;
+            System.out.println("this result-----> " + result2);
+            input.close();
+    }
+    static void times(){
+    double number , result; 
+    result=1;    
+        while(true){
+            Scanner input = new Scanner(System.in);
+        System.out.println("please enter order number ");
+            number=input.nextDouble();
+            result*=number;
+            System.out.println(result);
+        if(number==1){
+            break;
+}        
+    input.close();
+}System.out.println("this result-----> " + result);
+        
+        }
+    static void divided(){
+        Scanner input = new Scanner(System.in);
+        double divided , division, result;
+        while(true){
+            System.out.print("please enter divided number ");
+            divided=input.nextDouble();
+            System.out.print("please enter division number ");
+            division=input.nextDouble();
+            result=divided/division;
+            while(true){
+                System.out.println("are you add the number? 1-yes 2-no ");
+            int choose=input.nextInt();
+            if(choose==1){
+                System.out.println("please add the number");
+                double addNum = input.nextDouble();
+    }       if(choose==2){
+            System.out.println("this result is a ----> "+ result );
+            input.close();
+    }
+        }
+            }
+                }
+    static void exp(){
+        Scanner input = new Scanner(System.in);
+        int base , top ,result;
+        System.out.print("please neter base number: ");
+        base = input.nextInt();
+        System.out.print("please neter top number: ");
+        top=input.nextInt();
+        result = 1 ;
+        for (int i=1 ;i<=top ;i++) {
+            result *= base;
+        }
+        System.out.println(result);
+        input.close();
+    }
+    static void fac(){
+        Scanner input = new Scanner(System.in);
+        int value , result;
+        System.out.print("please enter fact. value: ");
+        value = input.nextInt();
+        result = 1;
+        for (int i = 1; i <= value; i++) {
+            result *= i;
+        }
+        System.out.println(result);
+        input.close();
+}
+    static void remeinder(){
+        Scanner input = new Scanner(System.in);
+        int divided , division , result ; 
+        System.out.print("please enter divded number: ");
+        divided = input.nextInt();
+        System.out.print("pleasxe enter divison number: ");
+        division = input.nextInt();
+        result = divided%division;
+        System.out.println("this remainder is ----> " + result);
+        input.close();
+    }    
+    static void mesh(){
+    double Long,Short,area,primeter,choose;
+    Scanner input = new Scanner(System.in);
+    System.out.println("please choose a process \n1-area calculate \n2-primeter calculate");
+    choose = input.nextDouble();
+    System.out.println("please enter short value");
+    Short=input.nextDouble();
+    System.out.println("please enter long value");
+    Long=input.nextDouble();
+    if(choose==1){
+    area=Long*Short;
+    System.out.println(area);
+    }
+    if(choose==2){  
+    primeter=(Long+Short)*2;
+    System.out.println(primeter);
+    }input.close();
+}   
+    
+    public static void main(String[] args) {
+    
+        int select;
+        String menu = "1- sum \n"
+                + "2- minus \n"
+                + "3- times \n"
+                + "4- divided \n"
+                + "5- expontent \n"
+                + "6- factorial\n"
+                + "7- Mod \n"
+                + "8- Area and primeter calculate\n"
+                + "0- exit";
+
+        
+            System.out.println(menu);
+            Scanner input = new Scanner(System.in);
+            System.out.print("Lütfen bir işlem seçiniz : ");
+            select = input.nextInt();
+            switch (select) {
+                case 1:
+                    sum();
+                    break;
+                case 2:
+                    minus();
+                    break;
+                case 3:
+                    times();
+                    break;
+                case 4:
+                    divided();
+                    break;
+                case 5:
+                    exp();
+                    break;
+                case 6:
+                    fac();
+                    break;
+                case 0:
+                    break;
+                default:
+                    System.out.println("Your entry false value.Please try again...");
+}
+input.close();
+        }
+}
